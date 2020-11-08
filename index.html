@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="uft-8">
 
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kaushan+Script&family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
@@ -18,8 +19,8 @@
 
     
 
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <style>
         body{
             background-color: lightgrey;
@@ -41,16 +42,98 @@
                 
                 
             }
+
+            .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  
+  
+}
+
+
+.navbar .icon {
+  display: none;
+}
+
+.center div{ 
+  margin:auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  
+  .imgAboutMe {
+    padding-right: 25%;
+  }
+  .flex1{
+  flex-direction: column-reverse;
+}
+.imgAboutMe2 {
+    padding-left: 20%;
+  }
+.flex2{
+  flex-direction: column-reverse;
+}
+}
+
+  @media screen and (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+  
+  .navbar a.icon {
+    float: right;
+    display:block;
+    
+   
+  }
+  .imgAboutMe {
+    padding-right: 15%;
+  }
+  .imgAboutMe2 {
+    padding-left: 10%;
+  }
+  .flex1{
+  flex-direction: column-reverse;
+}
+.flex2{
+  flex-direction: column-reverse;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .nav.responsive {
+    position: relative;
+    float: none;
+    display: block;
+    text-align: left;
+    }
+  .navbar.responsive .icon {
+    position: relative;
+  
+    
+    
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+ 
+}
     </style>
 </head>
 <body>
 
-    <nav class="navbar sticky col" style="z-index:1;">
+    <nav class="navbar sticky col" style="z-index:1;" id="myTopnav">
         <div class="container-fluid ">
           <div class="navbar-header" style="font-family: 'Concert One', cursive; font-weight: bold; ">
             <a class="navbar-brand" href="#" style="color: lightslategray; font-size: 32px;" >Portfolio  <i class="glyphicon glyphicon-king"></i></a>
+            <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
           </div>
-          <ul class="nav navbar-nav navbar-right" style="font-family: Lucida Console, Courier, monospace; font-size:18px;">
+          <div class="mAin">
+          <ul class="nav navbar-nav navbar-right" id="nav1" style="font-family: Lucida Console, Courier, monospace; font-size:18px;">
             <li class="active" style="padding: 4px;"><a href="#aboutme" target="ContentFrame">About</a></li>
             
             <li style="padding: 4px;"><a href="#skills">Skills</a></li>
@@ -59,9 +142,25 @@
             <li style="padding: 4px;"><a href="#hobbies">Hobbies</a></li>
             <li style="padding: 4px;"><a href="#contact">Contact Us</a></li>
             
+            
+            
           </ul>
         </div>
+          
+        </div>
+        
     </nav>
+    <!-- <div class="topnav sticky col container-fluid" style="z-index:1;" id="myTopnav">
+      <a class="navbar-brand navbar-header" href="#" style="color: lightslategray; font-size: 32px; font-family: 'Concert One', cursive; font-weight: bold;" >Portfolio  <i class="glyphicon glyphicon-king"></i></a>
+      <a href="#home" class="active" style="padding: 4px;">Home</a>
+      <a href="#news" style="padding: 4px;">News</a>
+      <a href="#contact" style="padding: 4px;">Contact</a>
+      
+      <a href="#about" style="padding: 4px;">About</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div> -->
+
+    
 
      <!-- Start Section -->
     <div style="background-image: url(bg1_1.jpg); background-repeat:no-repeat; background-size: 100% 100%; margin-left: 25px;margin-right: 25px;"><br><br><br><br><br>
@@ -84,15 +183,16 @@
             <!-- Project One Row-->
             
 
-            <div class="row">
+            <div class="row flex-container flex1">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
                     <h4 class="text-white"><br>Lorem</h4>
                     <p class="mb-0 text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
+                      has survived not only five centuries.</p>
                     <hr class="d-none d-lg-block mb-0 ml-0" />
                 </div>
-                <div class="col-sm-4"><img class="rounded-circle thumbnail" src="im2.jpg" alt="" style="float: right;"/></div>
+                <div class="col-sm-4 imgAboutMe"><img class="rounded-circle thumbnail" src="im2.jpg" alt="" style="float: right;"/></div>
                 <div class="col-sm-2"></div>
             </div>
         </div>
@@ -242,7 +342,7 @@
     </div>
     <div class="col-sm-6"> 
       <div>
-      <h2>Project Description 2</h2><hr>
+      <h2>Project Description2</h2><hr>
       <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
         has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
@@ -270,28 +370,28 @@
             <!-- Project One Row-->
             
 
-            <div class="row">
+            <div class="row flex-container flex1">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4">
                     <h4 class="text-white"><br>Hobbie1</h4>
                     <p class="mb-0 text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
-            has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
+                      has survived not only five centuries.</p>
                     <hr class="d-none d-lg-block mb-0 ml-0" />
                 </div>
-                <div class="col-sm-4"><img class="rounded-circle thumbnail" src="hob1.jpg" alt="" style="float: right;"/></div>
+                <div class="col-sm-4 imgAboutMe"><img class="rounded-circle thumbnail" src="hob1.jpg" alt="" style="float: right;"/></div>
                 <div class="col-sm-2"></div>
             </div>
             <br>
-            <div class="row">
+            <div class="row flex-container">
                 <div class="col-sm-2"></div>
                 
-                <div class="col-sm-4"><img class="thumbnail" src="hob2n1.jpg" alt="" style="float: left; clear:both;"/></div>
+                <div class="col-sm-4 imgAboutMe2"><img class="thumbnail" src="hob2n1.jpg" alt="" style="float: left; clear:both;"/></div>
                 <div class="col-sm-4">
                     <h4 class="text-white"><br>Hobbie2</h4>
                     <p class="mb-0 text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
-            has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It 
+                      has survived not only five centuries.</p>
                     <hr class="d-none d-lg-block mb-0 ml-0" />
                 </div>
                 <div class="col-sm-2"></div>
@@ -315,7 +415,7 @@
 
   <!-- Social Media -->
   
-  <div id="contact" >
+  <div id="contact center" >
     <div class="container" style="background-color: lightsteelblue;" style="margin-right: 30%;">
       <div class="row d-flex justify-content-start ml-5">
         <div style="margin-left: 45px;">
@@ -383,5 +483,23 @@
       </div>
     </footer>
   </div>
+
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      var y = document.getElementById("nav1");
+      if (x.className === "navbar sticky col") {
+        x.className += " responsive";
+
+        y.className += " responsive";
+        
+      } else {
+        x.className = "navbar sticky col";
+        y.className += "nav navbar-nav navbar-right";
+      }
+    }
+    </script>
 </body>
 </html>
